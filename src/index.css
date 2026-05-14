@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Original cream background with a very subtle warm gradient */
+body {
+  font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+  background: linear-gradient(180deg, #F1E0CF 0%, #f8ede0 100%);
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Custom animations for loading dots */
+@keyframes bounce200 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+@keyframes bounce400 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+.animate-bounce200 { animation: bounce200 0.6s infinite; }
+.animate-bounce400 { animation: bounce400 0.6s infinite; }
+
+/* Custom thin scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9a98b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b0875e;
+}
